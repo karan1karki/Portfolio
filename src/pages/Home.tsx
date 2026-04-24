@@ -18,7 +18,7 @@ const projects: Project[] = [
         id: 1,
         title: "Stock Management System",
         description: "An inventory management system for tracking stock levels, sales, and generating reports for business optimization.",
-        image: "/images/stocksx.png",
+        image: "../images/stocksx.png",
         technologies: ["Laravel", "PHP", "MySQL", "Chart.js"],
         githubUrl: "https://github.com",
     },
