@@ -16,6 +16,17 @@
 .nav-menu{
   display : none;
 }
+@media (max-width < 600 ) {
+  .nav-menu{
+    display :none;
+  }
+  . nav-items {
+    display : flex;
+    flex-direction : column;
+    font-size : small ;
+    padding : 5px;
+    margin : 0px;
+}
 .nav-list {
   display: flex;
   gap: 2rem;
