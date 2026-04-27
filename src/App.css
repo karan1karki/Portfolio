@@ -16,7 +16,7 @@
 .nav-menu{
   display : none;
 }
-@media (max-width < 600 ) {
+@media (max-width : 700px ) {
   .nav-menu{
     display : flex;
   }
