@@ -1381,11 +1381,18 @@ section h1 {
 .nav-menu {
   display : none;
 }
-@media (max-width : 700px) and (min-width : 400px) {
+@media (max-width : 1140px) and (min-width : 400px) {
    .nav-menu {
      display : flex;
    }
+  .hero-name {
+    display :flex;
+  }
   .nav-items {
     display :none;
-  }
+  /* }
+  .nav-list{
+    display: flex;
+    flex-direction :column;
+  } */
 }
