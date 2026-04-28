@@ -252,7 +252,7 @@ export default function Home () {
                 <nav className="nav-items" aria-label="Primary navigation">
                     <h1 className='hero-name'>Karan's Portfolio</h1>
                     <div>
-                        <CiMenuBurger className= "nav-menu" onclick={handleMenuMobile}/>
+                        <CiMenuBurger className= "nav-menu" onclick={() => handleMenuMobile()}/>
                     </div>
                     {sethandleMenuMobile && (
                         <ul>
