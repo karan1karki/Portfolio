@@ -1434,11 +1434,11 @@ section h1 {
         pointer-events: auto;
     }
     .close-menu {
-        font-size: 1.5rem;
+        font-size: 0.5rem;
         align-self: flex-end;
         cursor: pointer;
         position: fixed;
-        right: 0;
+        right: 5;
 
     }
 
