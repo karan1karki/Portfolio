@@ -3,7 +3,7 @@ import { CiDark , CiLight, CiMenuBurger } from "react-icons/ci"
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa"
 import { FaStar, FaTrophy, FaAward, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa"
 import React from 'react'
-import { useState } from 'react'
+import { useState , useEffect, useRef} from 'react'
 import {IoClose } from 'react-icons/io5'
 interface Project {
     id: number;
@@ -193,6 +193,32 @@ const skills: Skill[] = [
     { id: 20, name: 'TensorFlow', category: 'AI/ML', level: 75 }
 ]
 export default function Home () {
+    const menuRef = useRef<HTMLUListElement>(null);
+    useEffect(() => {
+        const closeMenu = () => {
+            if (handleMenuMobile) sethandleMenuMobile(false);
+        };
+
+        const handleOutsideInteraction = (event: MouseEvent) => {
+            if (handleMenuMobile && menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                closeMenu();
+            }
+        };
+
+        if (handleMenuMobile) {
+            window.addEventListener('mousedown', handleOutsideInteraction);
+            window.addEventListener('wheel', closeMenu, { passive: true });
+            window.addEventListener('touchmove', closeMenu, { passive: true });
+            window.addEventListener('scroll', closeMenu, { passive: true });
+        }
+
+        return () => {
+            window.removeEventListener('mousedown', handleOutsideInteraction);
+            window.removeEventListener('wheel', closeMenu);
+            window.removeEventListener('touchmove', closeMenu);
+            window.removeEventListener('scroll', closeMenu);
+        };
+    }, [handleMenuMobile]);
     const [status, setStatus] = useState({
         submitted: false,
         submitting: false,
@@ -257,7 +283,7 @@ export default function Home () {
                     </div>
                     {handleMenuMobile && (
                         <div className="mobile-menu-overlay">
-                            <ul className="mobile-menu">
+                            <ul className="mobile-menu" ref={menuRef}>
                                 {/* Close Button */}
                                 <li className="close-menu">
                                     <IoClose onClick={() => sethandleMenuMobile(false)} />
