@@ -1361,9 +1361,9 @@ section h1 {
 }
 .nav-resume {
   background-color: transparent;
-  border: 1px solid #000; /* Fixed the space in '1 px' */
+  border: 1px solid #000; 
   border-radius: 8px;
-  padding: 0px 20px;     /* Added more horizontal padding for better shape */
+  padding: 0px 20px;    
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
@@ -1401,18 +1401,15 @@ section h1 {
         position: fixed;
         top: 0;
         right: 0;
-        width: 40%;
-        height: 60vh;
-        /* backdrop-filter: blur(60px);  */
-        /* background-color: White; */
-        /* opacity : 1; */
+        width: 45%;
+        height: 50vh;
         z-index: 9998;
         display: flex;
         justify-content: flex-end;
     }
 
     .mobile-menu {
-        width: 55%;
+        width: 65%;
         height: 100%;
         list-style: none;
         padding: 1.5rem;
@@ -1455,6 +1452,22 @@ section h1 {
       color: #1d9bf0 !important;
       padding-left: 30px; 
       background: rgba(29, 155, 240, 0.05);
+  }
+  .about-section {
+    max-width: 100vh;
+  }
+  .about-inner {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .skills-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 }
 
