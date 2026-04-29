@@ -1410,7 +1410,7 @@ section h1 {
     }
 
     .mobile-menu {
-        width: 55%;
+        width: 45%;
         height: 100%;
         list-style: none;
         padding: 1.5rem;
@@ -1454,9 +1454,4 @@ section h1 {
       background: rgba(29, 155, 240, 0.05);
   }
 }
-.mobile-menu {
-  position: absolute;
-  max-width: 30px;
-  max-height : 50px;
-  background : transparent;
-}
+
