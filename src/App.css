@@ -1404,14 +1404,15 @@ section h1 {
         width: 40%;
         height: 50vh;
         backdrop-filter: blur(60px); 
-        background-color: transparent;
+        background-color: White;
+        opacity : 1;
         z-index: 9998;
         display: flex;
         justify-content: flex-end;
     }
 
     .mobile-menu {
-        width: 45%;
+        width: 55%;
         height: 100%;
         list-style: none;
         padding: 1.5rem;
