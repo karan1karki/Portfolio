@@ -1395,6 +1395,64 @@ section h1 {
   .nav-theme-toggle , .nav-social {
     display : none;
   }
+  
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 50vh;
+        backdrop-filter: blur(8px); 
+        background-color: transparent;
+        z-index: 9998;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mobile-menu {
+        width: 55%;
+        height: 100%;
+        list-style: none;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        gap: 1.5rem;
+        box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+    }
+ 
+    .mobile-menu li a{
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 500;
+        display: block;
+        padding: 10px 0;
+        pointer-events: auto;
+    }
+    .close-menu {
+        font-size: 2.5rem;
+        align-self: flex-end;
+        cursor: pointer;
+        position: fixed;
+        right: 0;
+
+    }
+
+    .theme-toggle-li {
+        margin-top: auto; 
+        padding-bottom: 2rem;
+    }
+  
+  .mobile-menu li:hover a::before {
+      left: 100%;
+  }
+  
+  .mobile-menu li:hover a {
+      color: #1d9bf0 !important;
+      padding-left: 30px; 
+      background: rgba(29, 155, 240, 0.05);
+  }
 }
 .mobile-menu {
   position: absolute;
