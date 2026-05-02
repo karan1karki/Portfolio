@@ -295,7 +295,7 @@ export default function Home () {
                                 <li className="mobile_project"><a href="#projects" onClick={() => sethandleMenuMobile(false)}>Project</a></li>
                                 <li className="mobile_skills"><a href="#skills" onClick={() => sethandleMenuMobile(false)}>Skills</a></li>
                                 <li className="mobile_achivements"><a href="#achievements" onClick={() => sethandleMenuMobile(false)}>Achievements</a></li>
-                                <li className="mobile_resume"><a href="/images/cv.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                                <li className="mobile_resume"><a href="/images/CV.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
                                 
                                  <li className="theme-toggle-li">
                                     <button className="nav-theme-toggle" type="button" onClick={() => setIsDark(!isDark)}>
